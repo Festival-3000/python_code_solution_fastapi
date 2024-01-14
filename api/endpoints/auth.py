@@ -166,7 +166,7 @@ def get_user_profile(db: Session = Depends(get_db),credentials: HTTPAuthorizatio
                 status_code=status.HTTP_400_BAD_REQUEST, detail=f"something went wrong"+ str(e))
     
 
-@router.get("/historic-weather")
+@router.get("/historic_weather")
 async def get_historic_weather(
     db: Session = Depends(get_db),
     latitude: float = Query(..., title="Latitude", description="Location latitude"),
